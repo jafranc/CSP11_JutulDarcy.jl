@@ -1,0 +1,19 @@
+    1  cd /opt/misc/
+    2  apt install python3-venv
+    3  python3 -m venv .venv
+    4  . .venv/bin/activate
+    5  pip install gmsh
+    6  python3 make_3dmsh.py 
+    7  apt install octave 
+    8  python3 make_3dmsh.py 
+    9  python3 make_3dmsh.py -v B -nx 100 -ny 50 -nz 1
+   10  vim extrudeAndPopulate.m 
+   11  octave extrudeAndPopulate.m 
+   12  vim computeGeometry.m 
+   13  octave extrudeAndPopulate.m 
+   14  fg
+   15  vim computeGeometry.m 
+   16  octave extrudeAndPopulate.m 
+   17  vim computeGeometry.m 
+   18  octave extrudeAndPopulate.m 
+   19  history > log.try
